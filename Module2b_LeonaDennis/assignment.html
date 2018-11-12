@@ -1,0 +1,94 @@
+<!DOCTYPE html> 
+<html> 
+            <body> 
+
+             <div>
+                  <img id="play" src="playbtn.png" width="30" height="30" onclick="playPause()">
+                  <img id="pause" src="pause.png " style="display: none;" width="30" height="30" onclick="playPause()">
+                  <img id="back" src="backbtn.png" width="30" height="30" onclick="Back ()">
+                  <img src="stopbtn.png" width="30" height="30" onclick="Stop ()">
+                  <img id="next" src="nextbtn.png" width="30" height="30" onclick="Next ()">
+                 
+                <br><br>
+
+                <video id="video1" width="900">
+                    <source src="media/mov_bbb.mp4" type="video/mp4">
+                    <source src="media/mov_bbb.ogg" type="video/ogg">
+
+                    <source src="media/maldives.mp4" type="video/mp4">
+                    <source src="maldives.ogg" type="video/ogg">
+
+                    <source src="media/rove.mp4" type="video/mp4">
+                    <source src="media/rove.ogg" type="video/ogg"> 
+                </video>
+
+                <audio  width ="900" >
+
+                  <source src="media/Seconds.mp3" type="audio/mp3">
+                  <source src="media/Vocal_Groove.mp3" type="audio/mp3">
+                  <source src="media/Black_Ant.mp3" type="audio/mp3">
+                   
+                </audio>
+
+             </div>  
+
+            <script> 
+                  var myVideo = document.getElementById("video1"); 
+                  
+                  var play1 = document.getElementById("play");
+                  var pause2 = document.getElementById("pause");
+                  var back1 = document.getElementById("back");
+                  var stop1 = document.getElementById("stop");
+                  var next1 = document.getElementById("next");
+
+                
+
+                 function playPause() { 
+
+
+                        if (myVideo.paused) {
+
+                           myVideo.play();
+
+                            play1.style.display = "none";
+                            pause2.style.display = "inline";
+                        }
+                           
+
+                        else {
+                                myVideo.pause(); 
+
+                                play1.style.display = "inline";
+                                pause2.style.display = "none";
+                        
+                        }
+
+                      }
+
+                  // back.addEventListener("click", function()){
+                  //   if (myVideo.back1 == false) {
+                  //     myVideo.back1 = true;
+                  //   }else{
+                  //     myVideo.back1 = false;
+                  //   }
+                  // }
+
+
+                  function Back() { 
+                      myVideo.Back(); 
+
+                      if(myVideo.back){
+                        
+                      }
+                  } 
+
+                  function Next() { 
+                      myVideo.Next(); 
+                  } 
+
+                  
+            </script> 
+
+            <p>Video courtesy of <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+            </body> 
+</html>
